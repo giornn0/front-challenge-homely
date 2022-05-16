@@ -1,4 +1,4 @@
-import { adminOptions, opsOptions, userOptions } from "./options"
+import { adminOptions, opsOptions, opsOptions2, userOptions } from "./options"
 
 export const Roles = Object.freeze({
   Admin:'admin',
@@ -11,7 +11,8 @@ export const Roles = Object.freeze({
 export const Options= Object.freeze({
   admin:adminOptions,
   user: userOptions,
-  ops: opsOptions
+  ops: opsOptions,
+  ops2: opsOptions2
 })
 
 export const AUTH_TOKENS= Object.freeze({

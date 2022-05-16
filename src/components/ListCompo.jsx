@@ -20,7 +20,9 @@ const ListCompo = ({ title, list, collapsable, mainIcon,details, header, handleC
                 </ListSubheader>
             }
         > 
-            {!list?<Spinner />:list?.map((option, index) => (
+            {!list?<Spinner />:
+              !list.length?'Sin Resultados':
+              list?.map((option, index) => (
                 <ListItemCompo
                     key={index}
                     option={option}

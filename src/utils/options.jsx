@@ -12,7 +12,14 @@ export const adminOptions = [
 export const opsOptions = [
   {
     label: 'Tickets Asignados',
-    path: '/tickets/list'
+    path: '/tickets/list?operator=1'
+  }
+];
+
+export const opsOptions2 = [
+  {
+    label: 'Tickets Asignados',
+    path: '/tickets/list?operator=2'
   }
 ];
 

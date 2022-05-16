@@ -5,19 +5,21 @@ import { RoleContext } from "../../states/context";
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 import { details } from "./utils/constants";
 import { Roles } from "../../utils/constants";
+import { useSearchParams } from "react-router-dom";
 
 
 const TicketList = ()=> {
   const [tickets, setTickets] = useState(null);
   const {role} = useContext(RoleContext);
+  const [refresh] = useSearchParams();
+
 
   useEffect(()=>{
-    const params = {page:1, take:100};
-    getTickets({role,params, setTickets})
-    if(role==Roles.Operador){
-      getTicket({role,params, setTickets})
-    }
-  },[])
+      setTickets(null)
+      const params = {page:1, take:100};
+      getTickets({role,params, setTickets})
+    
+  },[refresh])
 
   const props = {
     mainIcon: <CleaningServicesIcon/>,

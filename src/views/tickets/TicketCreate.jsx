@@ -25,7 +25,6 @@ const TicketCreate = () => {
 
     const change = (control, value) => {
         setTicket((prev) => ({ ...prev, [control]: value }))
-        console.log(ticket)
     }
 
     const submit= ()=>{
